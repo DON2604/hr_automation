@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex min-h-screen w-full flex-col">
       {/* Header */}
@@ -50,14 +53,18 @@ const Landing = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
-                  <button className="flex h-12 min-w-40 items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 text-base font-bold text-white shadow-lg shadow-blue-600/25 transition-all hover:-translate-y-0.5 hover:bg-blue-600/90 hover:shadow-xl active:translate-y-0">
+                  <button 
+                    onClick={() => navigate("/login")}
+                    className="flex h-12 min-w-40 items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 text-base font-bold text-white shadow-lg shadow-blue-600/25 transition-all hover:-translate-y-0.5 hover:bg-blue-600/90 hover:shadow-xl active:translate-y-0">
                     <span className="material-symbols-outlined text-[20px]">
                       id_card
                     </span>
                     <span>University Login</span>
                   </button>
 
-                  <button className="flex h-12 min-w-40 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-6 text-base font-bold text-slate-700 transition-all hover:bg-slate-700 hover:text-white">
+                  <button 
+                    onClick={() => navigate("/get-access")}
+                    className="flex h-12 min-w-40 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-6 text-base font-bold text-slate-700 transition-all hover:bg-slate-700 hover:text-white">
                     <span className="material-symbols-outlined text-[20px]">
                       contact_support
                     </span>

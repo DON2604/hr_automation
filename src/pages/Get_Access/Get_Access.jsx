@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Left_Panel from "../../components/Left_Panel";
 
 const Get_Access = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-2">
       <Left_Panel />
@@ -76,6 +79,7 @@ const Get_Access = () => {
             <div className="text-center">
               <button
                 type="button"
+                onClick={() => navigate("/login")}
                 className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline"
               >
                 <span className="material-symbols-outlined text-base">

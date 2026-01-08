@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Left_Panel from "../../components/Left_Panel";
 
 const Login = () => {
   const [userType, setUserType] = useState("student");
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-2">
@@ -90,15 +92,29 @@ const Login = () => {
             </button>
 
             <div className="text-center text-xs text-slate-400">
-              Single Sign-On
+              Don't have access?
             </div>
 
             <button
               type="button"
               className="w-full rounded-lg border border-slate-300 py-2 text-sm font-medium hover:bg-slate-50 transition"
+              onClick={()=>navigate("/get-access")}
             >
-              Log in with University Credentials
+              Get Access To Your Credentials
             </button>
+
+            <div className="text-center">
+              <button
+                type="button"
+                onClick={() => navigate("/")}
+                className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline"
+              >
+                <span className="material-symbols-outlined text-base">
+                  arrow_back
+                </span>
+                Back to Home
+              </button>
+            </div>
           </form>
 
           {/* Footer */}
