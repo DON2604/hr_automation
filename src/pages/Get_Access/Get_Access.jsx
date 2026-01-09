@@ -12,7 +12,7 @@ const Get_Access = () => {
       <div className="flex items-center justify-center px-6 sm:px-10">
         <div className="w-full max-w-md">
           {/* Top Right Help */}
-          <div className="mb-6 flex justify-end text-sm text-slate-500">
+          <div className="mb-6 mt-6 flex justify-end text-sm text-slate-500">
             <span className="flex cursor-pointer items-center gap-1 hover:text-blue-600">
               <span className="material-symbols-outlined text-base">help</span>
               Help & Support
@@ -90,10 +90,7 @@ const Get_Access = () => {
             </div>
           </form>
 
-          <p className="mt-6 text-center text-xs text-slate-400">
-            Protected by reCAPTCHA and subject to University Privacy Policy and
-            Terms of Service.
-          </p>
+         
         </div>
       </div>
     </div>

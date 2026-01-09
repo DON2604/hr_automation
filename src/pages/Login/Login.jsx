@@ -13,7 +13,7 @@ const Login = () => {
       <div className="flex items-center justify-center px-6 sm:px-10">
         <div className="w-full max-w-md">
           {/* Top Right Help */}
-          <div className="mb-6 flex justify-end text-sm text-slate-500">
+          <div className="mb-6 mt-6 flex justify-end text-sm text-slate-500">
             <span className="flex items-center gap-1 cursor-pointer hover:text-blue-600">
               <span className="material-symbols-outlined text-base">
                 help
@@ -87,6 +87,7 @@ const Login = () => {
             <button
               type="submit"
               className="mt-2 w-full rounded-lg bg-blue-600 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition"
+              onClick={()=>navigate("/leave-mgmt")}
             >
               Sign In
             </button>
@@ -117,11 +118,7 @@ const Login = () => {
             </div>
           </form>
 
-          {/* Footer */}
-          <p className="mt-6 text-center text-xs text-slate-400">
-            Protected by reCAPTCHA and subject to University Privacy Policy
-            and Terms of Service.
-          </p>
+         
         </div>
       </div>
     </div>
