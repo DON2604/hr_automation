@@ -6,6 +6,11 @@ const Login = () => {
   const [userType, setUserType] = useState("student");
   const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/leave-mgmt");
+  };
+
   return (
     <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-2">
       <Left_Panel/>
@@ -42,7 +47,7 @@ const Login = () => {
             Please enter your university credentials to access the portal.
           </p>
 
-          <form className="mt-6 space-y-4">
+          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
             {/* User Type Dropdown */}
             <div>
               <label className="text-sm font-medium text-slate-700">
@@ -87,7 +92,6 @@ const Login = () => {
             <button
               type="submit"
               className="mt-2 w-full rounded-lg bg-blue-600 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition"
-              onClick={()=>navigate("/leave-mgmt")}
             >
               Sign In
             </button>

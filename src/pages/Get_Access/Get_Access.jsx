@@ -5,6 +5,12 @@ import Left_Panel from "../../components/Left_Panel";
 const Get_Access = () => {
   const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log("Access request submitted");
+  };
+
   return (
     <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-2">
       <Left_Panel />
@@ -36,7 +42,7 @@ const Get_Access = () => {
           </p>
 
           {/* Form */}
-          <form className="mt-6 space-y-4">
+          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="text-sm font-medium text-slate-700">
                 Full Name
