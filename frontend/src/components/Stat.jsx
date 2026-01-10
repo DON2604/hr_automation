@@ -7,7 +7,7 @@ export default function Stat({ label, value, negative, highlight }) {
     >
       <span
         className={
-          highlight ? "text-lg font-semibold text-blue-600" : "text-gray-600"
+          highlight ? "font-semibold text-blue-600" : "text-gray-600"
         }
       >
         {label}
@@ -17,7 +17,7 @@ export default function Stat({ label, value, negative, highlight }) {
           negative
             ? "text-red-500"
             : highlight
-            ? "text-lg font-semibold text-blue-600"
+            ? "font-semibold text-blue-600"
             : "font-medium"
         }
       >
